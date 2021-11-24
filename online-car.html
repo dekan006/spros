@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+.online-car {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  text-align: center;
+}
+.online-btn {
+  min-width: 70px;
+  min-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-weight: 500;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.online-btn-bg {
+  background: rgb(96,9,240);
+  background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+  border: none;
+  
+}
+
+body {
+  margin: 0;
+}
+
+
+
+/* 
+.container {
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  background: rgba(129,5,240,1);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1.2fr 1.2fr;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "kef-online kef-online kef10 kef20 kef30"
+    "kef-online kef-online kef-10-num kef-20-num kef-30-num"
+    "kef-online kef-online kef-10-sym kef-20-sym kef-30-sym";
+}
+
+.kef-online { grid-area: kef-online; margin:20% 25% 25% 35%; font-size: 2.5em;}
+
+.kef10 { grid-area: kef10; margin:5px auto 5px;}
+
+.kef20 { grid-area: kef20; margin:5px auto 5px;}
+
+.kef30 { grid-area: kef30; margin:5px auto 5px;}
+
+.kef-10-num { grid-area: kef-10-num; margin:5px auto 5px; font-size: 1.6em; color: #fff;}
+
+.kef-20-num { grid-area: kef-20-num; margin:5px auto 5px;font-size: 1.6em;color: #7AFA00;}
+
+.kef-30-num { grid-area: kef-30-num; margin:5px auto 5px;font-size: 1.6em;color: red;}
+
+.kef-10-sym { grid-area: kef-10-sym; margin:5px auto 5px;font-size: 1.2em;}
+
+.kef-20-sym { grid-area: kef-20-sym; margin:5px auto 5px;font-size: 1.2em;}
+
+.kef-30-sym { grid-area: kef-30-sym; margin:5px auto 5px;font-size: 1.2em;} */
+
+.container {
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1.2fr 1.2fr;
+  background: rgba(129,5,240,1);
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "kef-online-title kef-online-title kef10 kef20 kef30"
+    "kef-online kef-online kef-10-num kef-20-num kef-30-num"
+    "kef-online-footer kef-online-footer kef-10-sym kef-20-sym kef-30-sym";
+}
+
+.kef10 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef10;
+}
+
+.kef20 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef20;
+}
+
+.kef30 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef30;
+}
+
+.kef-10-num {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-10-num;
+  font-size: 1.8em; 
+  color: #fff;
+}
+
+.kef-20-num {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-20-num;
+  font-size: 1.8em;
+  color: #7AFA00;
+}
+
+.kef-30-num {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-30-num;
+  font-size: 1.8em;
+  color: red;
+}
+
+.kef-10-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-10-sym;
+  font-size: 1.2em;
+}
+
+.kef-20-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-20-sym;
+  font-size: 1.2em;
+}
+
+.kef-30-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-30-sym;
+  font-size: 1.2em;
+}
+
+.kef-online-title {
+
+  margin-top: 5px;
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-online-title;
+}
+
+.kef-online-footer {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-online-footer;
+}
+
+.kef-online {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-online;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     </header>
+
+
+       
+     
+     <div class="online-car">
+       
+       <button class="online-btn online-btn-bg">online <i class="fas fa-car"> </i>1084</button>
+       
+     </div>
+
+      <div class="container">
+      <div class="kef10">10 min</div>
+      <div class="kef20">20 min</div>
+      <div class="kef30">30 min</div>
+      <div class="kef-10-num"><i class="fas fa-equals"></i></div>
+      <div class="kef-20-num"><i class="fas fa-arrow-up"></i></div>
+      <div class="kef-30-num"><i class="fas fa-arrow-down"></i></div>
+      <div class="kef-10-sym">4,3</div>
+      <div class="kef-20-sym">3,6</div>
+      <div class="kef-30-sym">4,8</div>
+      <div class="kef-online-title">Сейчас</div>
+      <div class="kef-online-footer">Средний</div>
+      <div class="kef-online">4,4</div>
+    </div>
+
+</body>
+</html>
