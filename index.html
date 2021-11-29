@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+.online-car {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  text-align: center;
+}
+.online-btn {
+  min-width: 70px;
+  min-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-weight: 500;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.online-btn-bg {
+  background: rgb(96,9,240);
+  background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+  border: none;
+  
+}
+
+body {
+  margin: 0;
+}
+.red {
+  color: red;
+}
+
+.green {
+  color: #7AFA00;
+}
+
+.container {
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(129,5,240,1);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr 1.1fr 1fr 1.1fr 1.8fr;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "kef30-title kef-30-sym kef20-title kef-20-sym kef10-title kef-10-sym kef-online-title"
+    "kef30 kef-30-sym kef20 kef-20-sym kef10 kef-10-sym kef0";
+}
+
+.kef-30-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-30-sym;
+  font-size: 2em;
+}
+
+.kef-20-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-20-sym;
+  font-size: 2em;
+}
+
+.kef-10-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-10-sym;
+  font-size: 2em;
+}
+
+.kef-online-title {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-online-title;
+  font-size: 1em;
+}
+
+.kef0 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef0;
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.kef30 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef30;
+  font-size: 1.4em;
+}
+
+.kef20 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef20;
+  font-size: 1.4em;
+}
+
+.kef10 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef10;
+  font-size: 1.4em;
+}
+
+.kef20-title {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef20-title;
+  font-size: 0.7em;
+}
+
+.kef10-title {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef10-title;
+  font-size: 0.7em;
+}
+
+.kef30-title {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef30-title;
+  font-size: 0.7em;
+}
+@media (min-width: 600px) {
+.container {
+  margin-top: 100px;
+  width: 160px;
+  height: 160px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "kef30-title kef30  kef-30-sym"
+  "kef20-title kef20  kef-20-sym "
+  "kef10-title kef10  kef-10-sym"
+  "kef-online-title  kef0 kef0"
+   
+}
+.kef-online-title {
+
+justify-self: center;
+align-self: center;
+grid-area: kef-online-title;
+font-size: 0.8em;
+}
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     </header>
+
+     <section class="model-02">
+
+      <div class="container">
+        <div class="kef-30-sym"><i class="fas fa-equals"></i></div>
+        <div class="kef-20-sym"><i class="fas fa-equals"></i></div>
+        <div class="kef-10-sym"><i class="fas fa-equals"></i></div>
+        <div class="kef-online-title">Сейчас</div>
+        <div class="kef0">0</div>
+        <div class="kef30">0</div>
+        <div class="kef20">0</div>
+        <div class="kef10">0</div>
+        <div class="kef20-title">20 min</div>
+        <div class="kef10-title">10 min</div>
+        <div class="kef30-title">30 min</div>
+      </div>
+    </section>
+       
+     
+     <div class="online-car">
+       
+       <button class="online-btn online-btn-bg">online <i class="fas fa-car"> </i>1084</button>
+        
+
+</body>
+
+<script>
+ 
+  // let kef0 = 2.6;
+  // let kef10 = 2.5;
+  // let kef20 = 2.6;
+  // let kef30 = 2.7;
+
+
+  // расчет среднеквадратичного значения массива (необязательно, зависит от входных данных. Нужно если приходит массив)
+  function calculateAverageSqrt(arr) { 
+    let sumSqrt = arr.reduce((a, b) => a + b**2, 0);
+    return Math.round(Math.sqrt(sumSqrt/arr.length)*10)/10;
+  }
+
+
+// Показать коэффициенты  (параметры: кеф Сейчас, кеф 10 минут назад, кеф 20 минут, кеф 30 минут) 
+  function showOnlineKef(kef0, kef10, kef20, kef30) { 
+    document.querySelector(".kef0").textContent = kef0;
+    document.querySelector(".kef10").textContent = kef10;
+    document.querySelector(".kef20").textContent = kef20;
+    document.querySelector(".kef30").textContent = kef30;
+
+    compareKef(kef20, kef30, "kef-30");
+    compareKef(kef10, kef20, "kef-20");
+    compareKef(kef0, kef10, "kef-10");
+    
+  }
+
+  // вывод стрелок при сравнении кефов
+  function compareKef (kef0, kef10, kefdiv) { 
+    const kefOnlineDelta = 0.05; // коэфициент когда показывать знак = 
+    const kefOnlineDelta2 = 0.4; // когда показывать двойную стрелку
+
+    const up = `<i class="fas fa-arrow-up green"></i>`;
+    const down = `<i class="fas fa-arrow-down red"></i>`;
+
+    if (kef10 * (1 + kefOnlineDelta2) < kef0){
+      document.querySelector(`.${kefdiv}-sym`).innerHTML = up + up;
+    } else if (kef10 * (1 - kefOnlineDelta2) > kef0){
+      document.querySelector(`.${kefdiv}-sym`).innerHTML = down + down;
+    } else if (kef10 * (1 + kefOnlineDelta) < kef0) {
+      document.querySelector(`.${kefdiv}-sym`).innerHTML = up;
+    } else if (kef10 * (1 - kefOnlineDelta) > kef0) {
+      document.querySelector(`.${kefdiv}-sym`).innerHTML = down;
+    } 
+   
+  }
+  
+  showOnlineKef(2.3, 3.2, 5.5, 5.9);
+
+</script>
+</html>
