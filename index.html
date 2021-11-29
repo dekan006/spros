@@ -40,92 +40,70 @@
 body {
   margin: 0;
 }
-
-
-
-/* 
-.container {
-  color: #fff;
-  width: 100%;
-  height: 100px;
-  display: grid;
-  background: rgba(129,5,240,1);
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.6fr 1.2fr 1.2fr;
-  gap: 2px 2px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "kef-online kef-online kef10 kef20 kef30"
-    "kef-online kef-online kef-10-num kef-20-num kef-30-num"
-    "kef-online kef-online kef-10-sym kef-20-sym kef-30-sym";
+.red {
+  color: red;
 }
 
-.kef-online { grid-area: kef-online; margin:20% 25% 25% 35%; font-size: 2.5em;}
-
-.kef10 { grid-area: kef10; margin:5px auto 5px;}
-
-.kef20 { grid-area: kef20; margin:5px auto 5px;}
-
-.kef30 { grid-area: kef30; margin:5px auto 5px;}
-
-.kef-10-num { grid-area: kef-10-num; margin:5px auto 5px; font-size: 1.6em; color: #fff;}
-
-.kef-20-num { grid-area: kef-20-num; margin:5px auto 5px;font-size: 1.6em;color: #7AFA00;}
-
-.kef-30-num { grid-area: kef-30-num; margin:5px auto 5px;font-size: 1.6em;color: red;}
-
-.kef-10-sym { grid-area: kef-10-sym; margin:5px auto 5px;font-size: 1.2em;}
-
-.kef-20-sym { grid-area: kef-20-sym; margin:5px auto 5px;font-size: 1.2em;}
-
-.kef-30-sym { grid-area: kef-30-sym; margin:5px auto 5px;font-size: 1.2em;} */
+.green {
+  color: #7AFA00;
+}
 
 .container {
   width: 100%;
   height: 80px;
+  padding-left: 5px;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.6fr 1.2fr 1.2fr;
   background: rgba(129,5,240,1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 0.5fr 1fr;
   gap: 2px 2px;
   grid-auto-flow: row;
   grid-template-areas:
-    "kef-online-title kef-online-title kef10 kef20 kef30"
-    "kef-online kef-online kef-10-num kef-20-num kef-30-num"
-    "kef-online-footer kef-online-footer kef-10-sym kef-20-sym kef-30-sym";
+    "kef30-title kef-30-sym kef20-title kef-20-sym kef10-title kef-10-sym kef-online-title"
+    "kef30 kef-30-sym kef20 kef-20-sym kef10 kef-10-sym kef0";
 }
 
-@media (min-width: 600px) {
-.container {
-  margin-top: 100px;
-  width: 200px;
-  height: 180px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
-  grid-template-areas:
-    "kef-online-title  kef-online kef-online-footer"
-    " kef10 kef-10-num  kef-10-sym"
-    " kef20 kef-20-num  kef-20-sym "
-    " kef30 kef-30-num kef-30-sym"
-}
-}
-
-.kef10 {
+.kef-30-sym {
 
   justify-self: center;
   align-self: center;
-  grid-area: kef10;
-  font-size: 0.7em;
+  grid-area: kef-30-sym;
+  font-size: 2em;
 }
 
-.kef20 {
+.kef-20-sym {
 
   justify-self: center;
   align-self: center;
-  grid-area: kef20;
-  font-size: 0.7em;
+  grid-area: kef-20-sym;
+  font-size: 2em;
+}
+
+.kef-10-sym {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-10-sym;
+  font-size: 2em;
+}
+
+.kef-online-title {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef-online-title;
+  font-size: 1em;
+}
+
+.kef0 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef0;
+  font-size: 2.2em;
+  font-weight: 700;
 }
 
 .kef30 {
@@ -133,84 +111,69 @@ body {
   justify-self: center;
   align-self: center;
   grid-area: kef30;
+  font-size: 1.4em;
+}
+
+.kef20 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef20;
+  font-size: 1.4em;
+}
+
+.kef10 {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef10;
+  font-size: 1.4em;
+}
+
+.kef20-title {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: kef20-title;
   font-size: 0.7em;
 }
 
-.kef-10-num {
+.kef10-title {
 
   justify-self: center;
   align-self: center;
-  grid-area: kef-10-num;
-  font-size: 1.6em; 
-  color: #fff;
+  grid-area: kef10-title;
+  font-size: 0.7em;
 }
 
-.kef-20-num {
+.kef30-title {
 
   justify-self: center;
   align-self: center;
-  grid-area: kef-20-num;
-  font-size: 1.6em;
-  color: #7AFA00;
+  grid-area: kef30-title;
+  font-size: 0.7em;
 }
-
-.kef-30-num {
-
-  justify-self: center;
-  align-self: center;
-  grid-area: kef-30-num;
-  font-size: 1.6em;
-  color: red;
+@media (min-width: 600px) {
+.container {
+  margin-top: 100px;
+  width: 160px;
+  height: 160px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "kef30-title kef30  kef-30-sym"
+  "kef20-title kef20  kef-20-sym "
+  "kef10-title kef10  kef-10-sym"
+  "kef-online-title  kef0 kef0"
+   
 }
-
-.kef-10-sym {
-  margin-bottom: 5px;
-  justify-self: center;
-  align-self: center;
-  grid-area: kef-10-sym;
-  font-size: 1em;
-}
-
-.kef-20-sym {
-  margin-bottom: 5px;
-  justify-self: center;
-  align-self: center;
-  grid-area: kef-20-sym;
-  font-size: 1em;
-}
-
-.kef-30-sym {
-  margin-bottom: 5px;
-  justify-self: center;
-  align-self: center;
-  grid-area: kef-30-sym;
-  font-size: 1em;
-}
-
 .kef-online-title {
 
-  margin-top: 5px;
-  justify-self: center;
-  align-self: center;
-  font-size: 0.7em;
-  grid-area: kef-online-title;
+justify-self: center;
+align-self: center;
+grid-area: kef-online-title;
+font-size: 0.8em;
 }
-
-.kef-online-footer {
-
-  justify-self: center;
-  align-self: center;
-  font-size: 0.8em;
-  grid-area: kef-online-footer;
-}
-
-.kef-online {
-
-  justify-self: center;
-  align-self: center;
-  grid-area: kef-online;
-  font-size: 2em;
-  font-weight: 700;
 }
 
     </style>
@@ -220,29 +183,71 @@ body {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      </header>
 
-
+     <div class="container">
+      <div class="kef-30-sym"><i class="fas fa-equals"></i></div>
+      <div class="kef-20-sym"><i class="fas fa-equals"></i></div>
+      <div class="kef-10-sym"><i class="fas fa-equals"></i></div>
+      <div class="kef-online-title">Сейчас</div>
+      <div class="kef0">0</div>
+      <div class="kef30">0</div>
+      <div class="kef20">0</div>
+      <div class="kef10">0</div>
+      <div class="kef20-title">20 min</div>
+      <div class="kef10-title">10 min</div>
+      <div class="kef30-title">30 min</div>
+    </div>
        
      
      <div class="online-car">
        
        <button class="online-btn online-btn-bg">online <i class="fas fa-car"> </i>1084</button>
-       
-     </div>
-
-      <div class="container">
-      <div class="kef10">10 min</div>
-      <div class="kef20">20 min</div>
-      <div class="kef30">30 min</div>
-      <div class="kef-10-num"><i class="fas fa-equals"></i></div>
-      <div class="kef-20-num"><i class="fas fa-arrow-up"></i></div>
-      <div class="kef-30-num"><i class="fas fa-arrow-down"></i></div>
-      <div class="kef-10-sym">4,3</div>
-      <div class="kef-20-sym">3,6</div>
-      <div class="kef-30-sym">4,8</div>
-      <div class="kef-online-title">Сейчас</div>
-      <div class="kef-online-footer">Средний</div>
-      <div class="kef-online">4,4</div>
-    </div>
+        
 
 </body>
+
+<script>
+ 
+  // let kef0 = 2.6;
+  // let kef10 = 2.5;
+  // let kef20 = 2.6;
+  // let kef30 = 2.7;
+  
+  function showOnlineKef(kef0, kef10, kef20, kef30) {
+    const kefOnlineDelta = 0.95;
+    document.querySelector(".kef0").textContent = kef0;
+    document.querySelector(".kef10").textContent = kef10;
+    document.querySelector(".kef20").textContent = kef20;
+    document.querySelector(".kef30").textContent = kef30;
+
+    if (kef30 < kef20 * kefOnlineDelta) {
+      document.querySelector(".kef-30-sym").innerHTML = `<i class="fas fa-arrow-up green"></i><i class="fas fa-arrow-up green">`;
+    }
+    if (kef30 * kefOnlineDelta  > kef20) {
+      document.querySelector(".kef-30-sym").innerHTML = `<i class="fas fa-arrow-down red"></i>`;
+    }
+
+    if (kef20< kef10 * kefOnlineDelta) {
+      document.querySelector(".kef-20-sym").innerHTML = `<i class="fas fa-arrow-up green"></i><i class="fas fa-arrow-up green">`;
+    }
+    if (kef20 * kefOnlineDelta  > kef10) {
+      document.querySelector(".kef-20-sym").innerHTML = `<i class="fas fa-arrow-down red"></i>`;
+    }
+
+    if (kef10< kef0 * kefOnlineDelta) {
+      document.querySelector(".kef-10-sym").innerHTML = `<i class="fas fa-arrow-up green"></i><i class="fas fa-arrow-up green"></i>`;
+    }
+    if (kef10 * kefOnlineDelta > kef0 ) {
+      document.querySelector(".kef-10-sym").innerHTML = `<i class="fas fa-arrow-down red"></i>`;
+    }
+
+  }
+
+  function calculateAverageSqrt(arr) { 
+    let sumSqrt = arr.reduce((a, b) => a + b**2, 0);
+    return Math.round(Math.sqrt(sumSqrt/arr.length)*10)/10;
+  }
+
+  showOnlineKef(5.2, 4.2, 3.4, 2.2);
+  
+</script>
 </html>
