@@ -208,6 +208,23 @@ font-size: 0.8em;
 </body>
 
 <script>
+
+  let urlGetKefTime = 'http://85.193.81.54/kefAverage/'
+
+fetch(urlGetKefTime + 3)
+  .then((resp) => resp.json())
+  .then(function(data) {
+    console.log(data);
+    let kef0 = data[6];
+    let kef10 = data[4];
+    let kef20 = data[2];
+    let kef30 = data[0];
+  })  
+  .catch(function(error) {
+
+  });
+
+  showOnlineKef(kef0, kef10, kef20, kef30);
  
   // let kef0 = 2.6;
   // let kef10 = 2.5;
@@ -216,10 +233,10 @@ font-size: 0.8em;
 
 
   // расчет среднеквадратичного значения массива (необязательно, зависит от входных данных. Нужно если приходит массив)
-  function calculateAverageSqrt(arr) { 
-    let sumSqrt = arr.reduce((a, b) => a + b**2, 0);
-    return Math.round(Math.sqrt(sumSqrt/arr.length)*10)/10;
-  }
+  // function calculateAverageSqrt(arr) { 
+  //   let sumSqrt = arr.reduce((a, b) => a + b**2, 0);
+  //   return Math.round(Math.sqrt(sumSqrt/arr.length)*10)/10;
+  // }
 
 
 // Показать коэффициенты  (параметры: кеф Сейчас, кеф 10 минут назад, кеф 20 минут, кеф 30 минут) 
@@ -255,7 +272,7 @@ font-size: 0.8em;
    
   }
   
-  showOnlineKef(2.3, 3.2, 5.5, 5.9);
+  
 
 </script>
 </html>
