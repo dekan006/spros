@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <style>
+    
+  <style>
         
 .online-car {
   position: absolute;
@@ -207,30 +208,48 @@ font-size: 0.8em;
 
 </body>
 
+
 <script>
+// var url = "http://taxispros.ru/kefAverage/3";
 
-  let urlGetKefTime = 'http://85.193.81.54/kefAverage/'
+// var xhr = new XMLHttpRequest();
+// xhr.open("GET", url);
 
-fetch(urlGetKefTime + 3)
-  .then((resp) => resp.json())
-  .then(function(data) {
+
+// xhr.onreadystatechange = function () {
+//    if (xhr.readyState === 4) {
+//       console.log(xhr.status);
+//       console.log(xhr.responseText);
+//    }};
+   
+
+// xhr.send();
+
+
+fetch('http://taxispros.ru/kefAverage/3', { mode: 'no-cors'})
+  .then((resp) => { 
+  console.log('resp', resp);
+  
+  return resp.json();
+  })
+  .then((data) => {
     console.log(data);
-    let kef0 = data[6];
-    let kef10 = data[4];
-    let kef20 = data[2];
-    let kef30 = data[0];
+    showOnlineKef(data[6], data[4], data[2], data[0]);
   })  
   .catch(function(error) {
-
+    console.log(error)
   });
 
-  showOnlineKef(kef0, kef10, kef20, kef30);
- 
-  // let kef0 = 2.6;
-  // let kef10 = 2.5;
-  // let kef20 = 2.6;
-  // let kef30 = 2.7;
+  // 
+  // let kef0 = 0.8;
+  // let kef10 = 1.2;
+  // let kef20 = 2;
+  // let kef30 = 0.1;
 
+
+  // showOnlineKef(kef0, kef10, kef20, kef30);
+ 
+  
 
   // расчет среднеквадратичного значения массива (необязательно, зависит от входных данных. Нужно если приходит массив)
   // function calculateAverageSqrt(arr) { 
@@ -255,14 +274,14 @@ fetch(urlGetKefTime + 3)
   // вывод стрелок при сравнении кефов
   function compareKef (kef0, kef10, kefdiv) { 
     const kefOnlineDelta = 0.05; // коэфициент когда показывать знак = 
-    const kefOnlineDelta2 = 0.4; // когда показывать двойную стрелку
+    const kefOnlineDelta2 = 0.3; // когда показывать двойную стрелку
 
     const up = `<i class="fas fa-arrow-up green"></i>`;
     const down = `<i class="fas fa-arrow-down red"></i>`;
 
     if (kef10 * (1 + kefOnlineDelta2) < kef0){
       document.querySelector(`.${kefdiv}-sym`).innerHTML = up + up;
-    } else if (kef10 * (1 - kefOnlineDelta2) > kef0){
+    } else if (((kef10 * (1 - kefOnlineDelta2) > kef0)) && ((kef0 + 0.5) > kef10)){
       document.querySelector(`.${kefdiv}-sym`).innerHTML = down + down;
     } else if (kef10 * (1 + kefOnlineDelta) < kef0) {
       document.querySelector(`.${kefdiv}-sym`).innerHTML = up;
